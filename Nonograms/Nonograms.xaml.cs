@@ -102,8 +102,13 @@ namespace Nonograms
         {
             if (game.Equals(empty))
             {
-                MessageBox.Show("Решено!");
+                empty.Win();
             }
+        }
+        private void MenuItem_Click_0(object sender, RoutedEventArgs e)
+        {
+            //ReadFromFile(new FileInfo("Resources\\1.txt"));
+            CreateGameField("0 0 1 0 0 \r\n0 1 1 1 0 \r\n1 1 1 1 1 \r\n0 0 1 0 0 \r\n0 0 1 1 0 \r\n");
         }
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
@@ -128,6 +133,7 @@ namespace Nonograms
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             //Диалог сколько клеток
+
 
             game = new GameField(10);
             empty = game.GetEmpty();

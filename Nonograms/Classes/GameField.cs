@@ -51,14 +51,12 @@ namespace Nonograms
                     if (nonogram[i][j] == "1")
                     {
                         Cell cell = new Cell(true);
-                        cell.PreviewMouseDown += MainWindow.CheckEquals;
                         this.Children.Add(cell);
                         cells[i, j] = cell;
                     }
                     else
                     {
                         Cell cell = new Cell();
-                        cell.PreviewMouseDown += MainWindow.CheckEquals;
                         this.Children.Add(cell);
                         cells[i, j] = cell;
                     }
@@ -202,6 +200,16 @@ namespace Nonograms
 
                 widthRowsNums = m1.Count > widthRowsNums ? m1.Count : widthRowsNums;
                 heightColumnsNums = m2.Count > heightColumnsNums ? m2.Count : heightColumnsNums;
+            }
+        }
+        public void Win()
+        {
+            foreach (var c in cells)
+            {
+                if (c.Marked == true)
+                {
+                    c.Background = new SolidColorBrush(Colors.Green);
+                }
             }
         }
         public bool Equals(GameField game)

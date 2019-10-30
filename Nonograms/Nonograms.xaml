@@ -22,16 +22,21 @@
                 <MenuItem Header="Сохранить" Click="MenuItem_Click_5"/>
             </MenuItem>
             <MenuItem Header="Выбор игры">
-                <MenuItem Header="1 - 10x10" Click="MenuItem_Click_1"/>
-                <MenuItem Header="2 - 10x10" Click="MenuItem_Click_2"/>
-                <MenuItem Header="3 - 15x15" Click="MenuItem_Click_3"/>
-                <MenuItem Header="4 - 21x21" Click="MenuItem_Click_4"/>
+                <MenuItem Header="5x5" Click="MenuItem_Click_0">
+                    <MenuItem Header="1"/>
+                </MenuItem>
+                <MenuItem Header="10x10">
+                    <MenuItem Header="1" Click="MenuItem_Click_1"/>
+                    <MenuItem Header="2" Click="MenuItem_Click_2"/>
+                </MenuItem>
+                <MenuItem Header="15x15" Click="MenuItem_Click_3"/>
+                <MenuItem Header="21x21" Click="MenuItem_Click_4"/>
             </MenuItem>
             <MenuItem Header="Справка"/>
         </Menu>
 
         <local:GameField Grid.Row="0" Grid.Column="1" x:Name="Top" Margin="0,20,0,0"/>
-        <local:GameField Grid.Row="1" Grid.Column="0" x:Name="Left" />
+        <local:GameField HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0" x:Name="Left" />
         <local:GameField Grid.Row="1" Grid.Column="1" x:Name="Game" />
 
     </Grid>
