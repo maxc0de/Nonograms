@@ -69,11 +69,11 @@ namespace Nonograms
             GameField field = new GameField();
 
             field.Rows = size;
-            field.Columns = heightColumnsNums;
+            field.Columns = widthRowsNums;
 
             for (int i = 0; i < size; i++)
             {
-                for (int j = 0; j < heightColumnsNums; j++)
+                for (int j = 0; j < widthRowsNums; j++)
                 {
                     try
                     {
@@ -101,10 +101,10 @@ namespace Nonograms
         {
             GameField field = new GameField();
 
-            field.Rows = widthRowsNums;
+            field.Rows = heightColumnsNums;
             field.Columns = size;
 
-            for (int i = 0; i < widthRowsNums; i++)
+            for (int i = 0; i < heightColumnsNums; i++)
             {
                 for (int j = 0; j < size; j++)
                 {
