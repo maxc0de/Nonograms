@@ -51,12 +51,14 @@ namespace Nonograms
                     if (nonogram[i][j] == "1")
                     {
                         Cell cell = new Cell(true);
+                        cell.PreviewMouseDown += MainWindow.CheckEquals;
                         this.Children.Add(cell);
                         cells[i, j] = cell;
                     }
                     else
                     {
                         Cell cell = new Cell();
+                        cell.PreviewMouseDown += MainWindow.CheckEquals;
                         this.Children.Add(cell);
                         cells[i, j] = cell;
                     }
