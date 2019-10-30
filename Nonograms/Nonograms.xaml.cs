@@ -23,6 +23,7 @@ namespace Nonograms
     /// </summary>
     public partial class MainWindow : Window
     {
+        static Random random = new Random(42);
         static GameField game;
         static GameField empty;
 
@@ -76,7 +77,7 @@ namespace Nonograms
         }
         private void SaveToFile(GameField field)
         {
-            using (StreamWriter sw = new StreamWriter("ilu.txt", false))
+            using (StreamWriter sw = new StreamWriter($"{random.Next()}.txt", false))
             {
 
                 for (int i = 0; i < 10; i++)

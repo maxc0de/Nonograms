@@ -68,7 +68,7 @@ namespace Nonograms
             this.Height = 20;
             this.Width = 20;
             this.PreviewMouseDown += Cell_MouseDown;
-            this.PreviewMouseDown += MainWindow.CheckEquals;
+            //this.PreviewMouseDown += MainWindow.CheckEquals; Отключена проверка решения
             this.Cursor = Cursors.Arrow;
             this.IsReadOnly = true;
         }
